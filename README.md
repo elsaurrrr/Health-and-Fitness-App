@@ -35,4 +35,4 @@ N/A
 N/A 
 
 **Group Bonus:**
-N/A
+1 person

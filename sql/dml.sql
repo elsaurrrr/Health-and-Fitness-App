@@ -101,7 +101,7 @@ JOIN Personal_Training_Session pts ON m.ID = pts.member_ID
 JOIN Room r ON pts.room_ID = r.ID
 WHERE r.room_description = 'Yoga Studio';
 
--- 7. Find how many ersonal training sessions each member has; display only those with more than 1 session.
+-- 7. Find how many personal training sessions each member has; display only those with more than 1 session.
 SELECT m.first_name, COUNT(pts.ID) AS session_count
 FROM Member m
 LEFT JOIN Personal_Training_Session pts ON m.ID = pts.member_ID

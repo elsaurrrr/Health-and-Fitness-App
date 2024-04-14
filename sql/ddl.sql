@@ -37,10 +37,10 @@ CREATE TABLE Member (
     user_password varchar(20) NOT NULL,
     date_of_birth DATE DEFAULT CURRENT_DATE NOT NULL,
     gender varchar(20),
-    height_CM varchar(20),
-    weight_KG varchar(20),
+    height_CM INTEGER,
+    weight_KG INTEGER,
     bmi varchar(20),
-    body_fat_percentage varchar(20),
+    body_fat_percentage Integer,
     last_login DATE,
     active boolean,
         foreign key schedule_ID REFERENCES Schedule(ID)
@@ -70,9 +70,7 @@ CREATE TABLE Admin_Staff (
     user_password varchar(20) NOT NULL,
     title varchar(20) NOT NULL,
     last_login DATE,
-    active boolean,
-        foreign key schedule_ID REFERENCES Schedule(ID)
-            on delete set null
+    active boolean
 );
 CREATE TABLE Fitness_Goal (
     ID SERIAL PRIMARY KEY,
